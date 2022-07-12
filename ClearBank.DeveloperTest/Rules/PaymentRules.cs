@@ -2,7 +2,7 @@
 
 namespace ClearBank.DeveloperTest.Rules
 {
-    internal class PaymentRules : IPaymentRules
+    public class PaymentRules : IPaymentRules
     {
         //Check the account is in a valid state to make the payment
         public bool PaymentValid(MakePaymentRequest request, Account account)

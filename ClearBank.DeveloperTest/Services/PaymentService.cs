@@ -22,7 +22,7 @@ namespace ClearBank.DeveloperTest.Services
 
             var result = new MakePaymentResult();
 
-            result.Success = request.PaymentValid(account, _paymentRules);
+            result.Success = request.PaymentValid(account, _paymentRules); 
 
             if (result.Success)
             {
