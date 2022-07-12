@@ -1,4 +1,5 @@
 ﻿using System;
+using ClearBank.DeveloperTest.Rules;
 
 namespace ClearBank.DeveloperTest.Types
 {
@@ -13,5 +14,10 @@ namespace ClearBank.DeveloperTest.Types
         public DateTime PaymentDate { get; set; }
 
         public PaymentScheme PaymentScheme { get; set; }
+
+        public bool PaymentValid(Account account, IPaymentRules paymentRules)
+        {
+            return paymentRules.PaymentValid(this, account);
+        }
     }
 }
