@@ -14,10 +14,5 @@ namespace ClearBank.DeveloperTest.Types
         public DateTime PaymentDate { get; set; }
 
         public PaymentScheme PaymentScheme { get; set; }
-
-        public bool PaymentValid(Account account, IPaymentRules paymentRules)
-        {
-            return paymentRules.PaymentValid(this, account);
-        }
     }
 }
